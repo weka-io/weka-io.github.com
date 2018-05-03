@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct Reactor</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">mecca
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">containers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mecca/containers/arrays.html">arrays</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/containers/otm_queue.html">otm_queue</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/containers/queue.html">queue</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">lib
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mecca/lib/concurrency.html">concurrency</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/lib/console.html">console</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/lib/consts.html">consts</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/lib/division.html">division</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/lib/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/lib/io.html">io</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/lib/iteration.html">iteration</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/lib/net.html">net</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/lib/reflection.html">reflection</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/lib/string.html">string</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/lib/time.html">time</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">platform
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mecca/platform/x86.html">x86</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package selected">
+						<a href="../../mecca/reactor.html">reactor</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">io
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/io/fd.html">fd</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/io/fs_watcher.html">fs_watcher</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/io/inotify.html">inotify</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/io/signals.html">signals</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">lib
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/lib/ondemand_worker.html">ondemand_worker</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/lib/process.html">process</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">subsystems
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/subsystems/gc_tracker.html">gc_tracker</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">sync
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/sync/barrier.html">barrier</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/sync/event.html">event</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/sync/fiber_queue.html">fiber_queue</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/sync/lock.html">lock</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/sync/queue.html">queue</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/sync/semaphore.html">semaphore</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/sync/throttler.html">throttler</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/sync/time_bomb.html">time_bomb</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/sync/verbose.html">verbose</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/fiber_group.html">fiber_group</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/fls.html">fls</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/reactor/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">runtime
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mecca/runtime/main.html">main</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mecca/runtime/ut.html">ut</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct Reactor</h1><p>The main scheduler for the micro-threading architecture.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">struct</span> <span class="typ">Reactor</span>
+			<span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.criticalSection.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>criticalSection</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">mecca<wbr/></span><span class="pun">.</span><span class="pln">reactor<wbr/></span><span class="pun">.</span><span class="typ">Reactor<wbr/></span><span class="pun">.</span><span class="pln">criticalSection</span></code></td><td>Return a RAII object handling a critical section
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.currentFiberHandle.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>currentFiberHandle</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../mecca/reactor/FiberHandle.html"><span class="typ">FiberHandle</span></a></code></td><td>Returns a FiberHandle to the currently running fiber
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.currentFiberId.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>currentFiberId</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">mecca<wbr/></span><span class="pun">.</span><span class="pln">lib<wbr/></span><span class="pun">.</span><span class="pln">typedid<wbr/></span><span class="pun">.</span><span class="typ">RawTypedIdentifier</span>!("FiberId",ushort,65535,65535,mecca.log.FMT(""),false)</code></td><td>Returns the FiberId of the currently running fiber.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.isActive.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>isActive</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Report whether the reactor is currently active
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.isIdle.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>isIdle</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Returns whether currently running fiber is the idle fiber.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.isInCriticalSection.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>isInCriticalSection</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Reports whether execution is currently within a critical section
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.isMain.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>isMain</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Returns whether currently running fiber is the main fiber.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.isOpen.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>isOpen</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Report whether the reactor has been properly opened (i.e. - setup has been called).
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.isRunning.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>isRunning</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Report whether the reactor is currently running
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.isSpecialFiber.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>isSpecialFiber</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Returns whether currently running fiber is a special (i.e. - non-user) fiber
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.reactorStats.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>reactorStats</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../../mecca/reactor/Reactor.Stats.html"><span class="typ">Reactor<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Stats</span></a></code></td><td>Report the current reactor statistics.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.boostFiberPriority.html" class="[&quot;public&quot;]">
+								<code>boostFiberPriority</code>
+							</a>
+						</td>
+						<td>Give a fiber temporary priority in execution.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.call.html" class="[&quot;public&quot;]">
+								<code>call</code>
+							</a>
+						</td>
+						<td>Schedule a callback for out of bounds immediate execution.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.considerYield.html" class="[&quot;public&quot;]">
+								<code>considerYield</code>
+							</a>
+						</td>
+						<td>Perform yield if fiber is running long enough.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.deferToThread.html" class="[&quot;public&quot;]">
+								<code>deferToThread</code>
+							</a>
+						</td>
+						<td>run a function inside a different thread.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.enterCriticalSection.html" class="[&quot;public&quot;]">
+								<code>enterCriticalSection</code>
+							</a>
+						</td>
+						<td>enter a no-fiber switch piece of code.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.getFiberState.html" class="[&quot;public&quot;]">
+								<code>getFiberState</code>
+							</a>
+						</td>
+						<td>Returns the <code class="lang-d"><a href="../../mecca/reactor/FiberState.html"><span class="typ"><a href="../../mecca/reactor/FiberState.html"><span class="typ">FiberState</span></a></span></a></code> of the specified fiber.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.joinFiber.html" class="[&quot;public&quot;]">
+								<code>joinFiber</code>
+							</a>
+						</td>
+						<td>Wait until given fiber finishes
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.leaveCriticalSection.html" class="[&quot;public&quot;]">
+								<code>leaveCriticalSection</code>
+							</a>
+						</td>
+						<td>leave the innermost critical section.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.registerIdleCallback.html" class="[&quot;public&quot;]">
+								<code>registerIdleCallback</code>
+							</a>
+						</td>
+						<td>Register an idle handler callback.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.registerRecurringTimer.html" class="[&quot;public&quot;]">
+								<code>registerRecurringTimer</code>
+							</a>
+						</td>
+						<td>registers a timer that will repeatedly trigger at set intervals.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.registerTimer.html" class="[&quot;public&quot;]">
+								<code>registerTimer</code>
+							</a>
+						</td>
+						<td>Registers a timer task.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.registerTimer.html" class="[&quot;public&quot;]">
+								<code>registerTimer</code>
+							</a>
+						</td>
+						<td>Register a timer callback
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.requestGCCollection.html" class="[&quot;public&quot;]">
+								<code>requestGCCollection</code>
+							</a>
+						</td>
+						<td>Request that a GC collection take place ASAP
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.resumeFiber.html" class="[&quot;public&quot;]">
+								<code>resumeFiber</code>
+							</a>
+						</td>
+						<td>Resume a suspended fiber
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.setFiberName.html" class="[&quot;public&quot;]">
+								<code>setFiberName</code>
+							</a>
+						</td>
+						<td>Set a fiber name
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.setup.html" class="[&quot;public&quot;]">
+								<code>setup</code>
+							</a>
+						</td>
+						<td>Set the reactor up for doing work.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.shouldYield.html" class="[&quot;public&quot;]">
+								<code>shouldYield</code>
+							</a>
+						</td>
+						<td>Returns whether the fiber is already running for a long time.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.sleep.html" class="[&quot;public&quot;]">
+								<code>sleep</code>
+							</a>
+						</td>
+						<td>Suspend the current fiber for a specified amount of time
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.spawnFiber.html" class="[&quot;public&quot;]">
+								<code>spawnFiber</code>
+							</a>
+						</td>
+						<td>Spawn a new fiber for execution.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.spawnFiber.html" class="[&quot;public&quot;]">
+								<code>spawnFiber</code>
+							</a>
+						</td>
+						<td>Spawn a new fiber for execution.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.start.html" class="[&quot;public&quot;]">
+								<code>start</code>
+							</a>
+						</td>
+						<td>Starts up the reactor.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.stop.html" class="[&quot;public&quot;]">
+								<code>stop</code>
+							</a>
+						</td>
+						<td>Stop the reactor, killing all fibers.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.suspendCurrentFiber.html" class="[&quot;public&quot;]">
+								<code>suspendCurrentFiber</code>
+							</a>
+						</td>
+						<td>Suspend the current fiber
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.teardown.html" class="[&quot;public&quot;]">
+								<code>teardown</code>
+							</a>
+						</td>
+						<td>Shut the reactor down.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.throwInFiber.html" class="[&quot;public&quot;]">
+								<code>throwInFiber</code>
+							</a>
+						</td>
+						<td>forward an exception to another fiber
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.yield.html" class="[&quot;public&quot;]">
+								<code>yield</code>
+							</a>
+						</td>
+						<td>Temporarily surrender the CPU for other fibers to run.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Inner structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.OpenOptions.html" class="[&quot;public&quot;]">
+								<code>OpenOptions</code>
+							</a>
+						</td>
+						<td>The options control aspects of the reactor's operation
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.Stats.html" class="[&quot;public&quot;]">
+								<code>Stats</code>
+							</a>
+						</td>
+						<td>Used by <code class="lang-d"><span class="pln">reportStats</span></code> to report statistics about the reactor
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.TimerHandle.html" class="[&quot;public&quot;]">
+								<code>TimerHandle</code>
+							</a>
+						</td>
+						<td>Handle used to manage registered timers
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.IdleCallbackDlg.html" class="[&quot;public&quot;]">
+								<code>IdleCallbackDlg</code>
+							</a>
+						</td>
+						<td>Delegates passed to <code class="lang-d"><a href="../../mecca/reactor/Reactor.registerIdleCallback.html"><span class="pln"><a href="../../mecca/reactor/Reactor.registerIdleCallback.html"><span class="pln">registerIdleCallback</span></a></span></a></code> must be of this signature
+</td>
+					</tr>
+				</table>
+			</section>
+			
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

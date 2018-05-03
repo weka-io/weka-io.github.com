@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct ThrottlerImpl</title>
+		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">mecca
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">containers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/containers/arrays.html">arrays</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/containers/otm_queue.html">otm_queue</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/containers/queue.html">queue</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">lib
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/concurrency.html">concurrency</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/console.html">console</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/consts.html">consts</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/division.html">division</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/io.html">io</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/iteration.html">iteration</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/net.html">net</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/reflection.html">reflection</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/string.html">string</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/time.html">time</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">platform
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/platform/x86.html">x86</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../../../mecca/reactor.html">reactor</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">io
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/io/fd.html">fd</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/io/fs_watcher.html">fs_watcher</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/io/inotify.html">inotify</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/io/signals.html">signals</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">lib
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/lib/ondemand_worker.html">ondemand_worker</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/lib/process.html">process</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">subsystems
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/subsystems/gc_tracker.html">gc_tracker</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">sync
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/barrier.html">barrier</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/event.html">event</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/fiber_queue.html">fiber_queue</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/lock.html">lock</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/queue.html">queue</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/semaphore.html">semaphore</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../../../mecca/reactor/sync/throttler.html">throttler</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/time_bomb.html">time_bomb</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/verbose.html">verbose</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/fiber_group.html">fiber_group</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/fls.html">fls</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">runtime
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/runtime/main.html">main</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/runtime/ut.html">ut</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct ThrottlerImpl</h1><p>Main throttler implementation
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">struct</span> <span class="typ">ThrottlerImpl</span>(<span class="typ">bool</span> AllowOverdraft<span class="pln"> </span><span class="pun">= </span><span class="kwd">false</span>)
+			<span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section><p>Implements <a href="https://en.wikipedia.org/wiki/Token_bucket">Token Bucket</a> QoS. Tokens are deposited into a bucket at a fixed rate.
+ Consumers request withdrawl of tokens from the bucket. If the bucket does not have enough tokens, the request to withdraw is paused until
+ such time as the bucket, again, has enough to allow the request to move forward.
+</p>
+
+<p> The bucket size controls the burst rate, i.e. - the amount of tokens that can be withdrawn without wait after a long quiet period.
+</p>
+
+<p> The throttler is strict first-come first-serve.
+</p>
+</section>
+
+			<section><h2>Properties</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../../mecca/reactor/sync/throttler/ThrottlerImpl.isOpen.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>isOpen</code></a><span class="tableEntryAnnotation">[get]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>reports whether open the throttler is open.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../../mecca/reactor/sync/throttler/ThrottlerImpl.close.html" class="[&quot;public&quot;]">
+								<code>close</code>
+							</a>
+						</td>
+						<td>Closes the throtller.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../../mecca/reactor/sync/throttler/ThrottlerImpl.open.html" class="[&quot;public&quot;]">
+								<code>open</code>
+							</a>
+						</td>
+						<td>initialize a throttler for use.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../../../mecca/reactor/sync/throttler/ThrottlerImpl.withdraw.html" class="[&quot;public&quot;]">
+								<code>withdraw</code>
+							</a>
+						</td>
+						<td>Withdraw tokens from the bucket.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Parameters</h2>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="AllowOverdraft">AllowOverdraft</td><td> there are two variants to the throttler. In the first (and default) variant, the tokens ballance must be able to fully
+ cover the current request. The second variant allows a request to proceed even if there is not enough tokens at the moment (overdraw),
+ so long as all previous debt has been repayed.</td></tr>
+</table>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

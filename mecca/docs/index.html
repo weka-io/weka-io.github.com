@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>API documentation</title>
+		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
+		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">mecca
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">containers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./mecca/containers/arrays.html">arrays</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/containers/otm_queue.html">otm_queue</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/containers/queue.html">queue</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">lib
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./mecca/lib/concurrency.html">concurrency</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/lib/console.html">console</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/lib/consts.html">consts</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/lib/division.html">division</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/lib/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/lib/io.html">io</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/lib/iteration.html">iteration</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/lib/net.html">net</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/lib/reflection.html">reflection</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/lib/string.html">string</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/lib/time.html">time</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">platform
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./mecca/platform/x86.html">x86</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="./mecca/reactor.html">reactor</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">io
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/io/fd.html">fd</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/io/fs_watcher.html">fs_watcher</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/io/inotify.html">inotify</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/io/signals.html">signals</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">lib
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/lib/ondemand_worker.html">ondemand_worker</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/lib/process.html">process</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">subsystems
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/subsystems/gc_tracker.html">gc_tracker</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">sync
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/sync/barrier.html">barrier</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/sync/event.html">event</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/sync/fiber_queue.html">fiber_queue</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/sync/lock.html">lock</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/sync/queue.html">queue</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/sync/semaphore.html">semaphore</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/sync/throttler.html">throttler</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/sync/time_bomb.html">time_bomb</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/sync/verbose.html">verbose</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/fiber_group.html">fiber_group</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/fls.html">fls</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/reactor/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">runtime
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./mecca/runtime/main.html">main</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mecca/runtime/ut.html">ut</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>API documentation</h1>
+			<table>
+				<col class="caption"/>
+				<tr>
+					<th>Module</th><th>Description</th>
+				</tr>
+			<tr>
+				<td>
+					<a href="./mecca/containers/arrays.html">mecca.containers.arrays</a>
+				</td>
+				<td>
+					@safe @nogc arrays
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/containers/otm_queue.html">mecca.containers.otm_queue</a>
+				</td>
+				<td>
+					Lock free one-to-many queues
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/containers/queue.html">mecca.containers.queue</a>
+				</td>
+				<td>
+					FIFO queues
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/lib/concurrency.html">mecca.lib.concurrency</a>
+				</td>
+				<td>
+					Helpers for asynchronously executing code
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/lib/console.html">mecca.lib.console</a>
+				</td>
+				<td>
+					Tools for manipulating the console
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/lib/consts.html">mecca.lib.consts</a>
+				</td>
+				<td>
+					Universal constants
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/lib/division.html">mecca.lib.division</a>
+				</td>
+				<td>
+					Library for efficient integer division by a single divider
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/lib/exception.html">mecca.lib.exception</a>
+				</td>
+				<td>
+					When things go wrong....
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/lib/io.html">mecca.lib.io</a>
+				</td>
+				<td>
+					File descriptor management
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/lib/iteration.html">mecca.lib.iteration</a>
+				</td>
+				<td>
+					Library for iterating over stuff
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/lib/net.html">mecca.lib.net</a>
+				</td>
+				<td>
+					Various networking support tools
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/lib/reflection.html">mecca.lib.reflection</a>
+				</td>
+				<td>
+					Various utilities for hacking the D type system
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/lib/string.html">mecca.lib.string</a>
+				</td>
+				<td>
+					Utility functions for handling strings
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/lib/time.html">mecca.lib.time</a>
+				</td>
+				<td>
+					It's about time
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/platform/x86.html">mecca.platform.x86</a>
+				</td>
+				<td>
+					X86 platform specific utils
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/io/fd.html">mecca.reactor.io.fd</a>
+				</td>
+				<td>
+					Reactor aware FD (file descriptor) operations
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/io/fs_watcher.html">mecca.reactor.io.fs_watcher</a>
+				</td>
+				<td>
+					Platform independent file watcher
+ Interface is expected to change in order to make it less platform specific.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/io/inotify.html">mecca.reactor.io.inotify</a>
+				</td>
+				<td>
+					Reactor friendly interface for Linux's inotify
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/io/signals.html">mecca.reactor.io.signals</a>
+				</td>
+				<td>
+					Manage signals as reactor callbacks
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/lib/ondemand_worker.html">mecca.reactor.lib.ondemand_worker</a>
+				</td>
+				<td>
+					Run a job in a fiber, but never two simultaneously
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/lib/process.html">mecca.reactor.lib.process</a>
+				</td>
+				<td>
+					Reactor aware process management
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/subsystems/gc_tracker.html">mecca.reactor.subsystems.gc_tracker</a>
+				</td>
+				<td>
+					This module is used to track who, when and how much fibers use the GC. This module is disabled by default.
+ Compile with --version=gc_tracker to enable.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/sync/barrier.html">mecca.reactor.sync.barrier</a>
+				</td>
+				<td>
+					Cross fibers synchronization point
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/sync/event.html">mecca.reactor.sync.event</a>
+				</td>
+				<td>
+					Level and edge triggers condition with multiple waiters
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/sync/fiber_queue.html">mecca.reactor.sync.fiber_queue</a>
+				</td>
+				<td>
+					Fiber queue helper for writing synchronization objects
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/sync/lock.html">mecca.reactor.sync.lock</a>
+				</td>
+				<td>
+					Implements a reactor aware mutex
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/sync/queue.html">mecca.reactor.sync.queue</a>
+				</td>
+				<td>
+					Reactor aware queue that waits for operations to be possible
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/sync/semaphore.html">mecca.reactor.sync.semaphore</a>
+				</td>
+				<td>
+					Reactor aware semaphore
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/sync/throttler.html">mecca.reactor.sync.throttler</a>
+				</td>
+				<td>
+					allows throttling the rate at which operations are done
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/sync/time_bomb.html">mecca.reactor.sync.time_bomb</a>
+				</td>
+				<td>
+					Set deadline for specific code execution
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/sync/verbose.html">mecca.reactor.sync.verbose</a>
+				</td>
+				<td>
+					Allows adding verbosity to sync objects
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/fiber_group.html">mecca.reactor.fiber_group</a>
+				</td>
+				<td>
+					group related fibers so they can all be killed together, if needed
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/fls.html">mecca.reactor.fls</a>
+				</td>
+				<td>
+					Fiber local storage
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/types.html">mecca.reactor.types</a>
+				</td>
+				<td>
+					Type definitions for reactor related types
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor/utils.html">mecca.reactor.utils</a>
+				</td>
+				<td>
+					Assorted helpers
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/runtime/main.html">mecca.runtime.main</a>
+				</td>
+				<td>
+					Mecca main entrypoint
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/runtime/ut.html">mecca.runtime.ut</a>
+				</td>
+				<td>
+					Mecca UT support
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mecca/reactor.html">mecca.reactor</a>
+				</td>
+				<td>
+					Define the micro-threading reactor
+
+				</td>
+			</tr>
+			</table>
+			<footer>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>
