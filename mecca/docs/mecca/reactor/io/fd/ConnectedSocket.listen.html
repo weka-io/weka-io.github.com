@@ -112,6 +112,11 @@ $('#symbolSearchPane').show();</script>
 			<ul class="tree-view">
 				<li>
 					<div class="module ">
+						<a href="../../../../mecca/platform/linux.html">linux</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
 						<a href="../../../../mecca/platform/x86.html">x86</a>
 					</div>
 				</li>
@@ -192,6 +197,11 @@ $('#symbolSearchPane').show();</script>
 				<li>
 					<div class="module ">
 						<a href="../../../../mecca/reactor/sync/fiber_queue.html">fiber_queue</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/future.html">future</a>
 					</div>
 				</li>
 				<li>
@@ -277,7 +287,9 @@ $('#symbolSearchPane').show();</script>
 			<span class="kwd">static </span><a href="../../../../mecca/reactor/io/fd/ConnectedSocket.html"><span class="typ">ConnectedSocket</span></a> <span class="pln">listen</span>
 			<span class="pun">(</span>
 			<br/>
-			&nbsp;&nbsp;<a href="../../../../mecca/lib/net/SockAddr.html"><span class="typ">SockAddr</span></a> <span class="pln">sa</span>
+			&nbsp;&nbsp;<a href="../../../../mecca/lib/net/SockAddr.html"><span class="typ">SockAddr</span></a> <span class="pln">sa</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">bool</span> <span class="pln">reuseAddr</span> <span class="pun">=</span> <span class="kwd">false</span>
 			<br/>
 			<span class="pun">)</span><span class="pln"> </span><span class="kwd">@nogc @trusted</span><span class="pun">;</span>
 			<br/>
@@ -285,7 +297,9 @@ $('#symbolSearchPane').show();</script>
 			<a href="../../../../mecca/reactor/io/fd/ConnectedSocket.html"><span class="typ">ConnectedSocket</span></a> <span class="pln">listen</span>(SA)
 			<span class="pun">(</span>
 			<br/>
-			&nbsp;&nbsp;<span class="pln">SA</span> <span class="pln">sa</span>
+			&nbsp;&nbsp;<span class="pln">SA</span> <span class="pln">sa</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">bool</span> <span class="pln">reuseAddr</span> <span class="pun">=</span> <span class="kwd">false</span>
 			<br/>
 			<span class="pun">)</span><span class="pln"> </span><span class="kwd">@nogc @trusted</span>
 			<br/>
@@ -302,6 +316,7 @@ $('#symbolSearchPane').show();</script>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="sa">sa</td><td> a socket address for the server to listen on. The second form is for passing protocol specific addresses
     (<code class="lang-d"><span class="typ">SockAddrIPv4</span></code>, <code class="lang-d"><span class="typ">SockAddrIPv6</span></code>, <code class="lang-d"><span class="typ">SockAddrUnix</span></code>).</td></tr>
+<tr><td id="reuseAddr">reuseAddr</td><td> Whether to set the <code class="lang-d"><span class="pln">SO_REUSEADDR</span></code> socket option</td></tr>
 </table>
 </section>
 <section><h2>Returns</h2>
