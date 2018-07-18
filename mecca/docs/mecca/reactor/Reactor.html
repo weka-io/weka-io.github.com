@@ -170,17 +170,6 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 				</li>
 				<li class="tree-view collapsed">
-					<div class="package ">subsystems
-					</div>
-			<ul class="tree-view">
-				<li>
-					<div class="module ">
-						<a href="../../mecca/reactor/subsystems/gc_tracker.html">gc_tracker</a>
-					</div>
-				</li>
-			</ul>
-				</li>
-				<li class="tree-view collapsed">
 					<div class="package ">sync
 					</div>
 			<ul class="tree-view">
@@ -298,13 +287,6 @@ $('#symbolSearchPane').show();</script>
 					</tr>
 					<tr>
 						<td>
-							<a href="../../mecca/reactor/Reactor.criticalSection.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>criticalSection</code></a><span class="tableEntryAnnotation">[get]</span>
-						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">mecca<wbr/></span><span class="pun">.</span><span class="pln">reactor<wbr/></span><span class="pun">.</span><span class="typ">Reactor<wbr/></span><span class="pun">.</span><span class="pln">criticalSection</span></code></td><td>Return a RAII object handling a critical section
-</td>
-					</tr>
-					<tr>
-						<td>
 							<a href="../../mecca/reactor/Reactor.currentFiberHandle.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>currentFiberHandle</code></a><span class="tableEntryAnnotation">[get]</span>
 						</td>
 						<td class="typecol"><code class="prettyprint lang-d"><a href="../../mecca/reactor/FiberHandle.html"><span class="typ">FiberHandle</span></a></code></td><td>Returns a FiberHandle to the currently running fiber
@@ -314,7 +296,14 @@ $('#symbolSearchPane').show();</script>
 						<td>
 							<a href="../../mecca/reactor/Reactor.currentFiberId.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>currentFiberId</code></a><span class="tableEntryAnnotation">[get]</span>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">mecca<wbr/></span><span class="pun">.</span><span class="pln">lib<wbr/></span><span class="pun">.</span><span class="pln">typedid<wbr/></span><span class="pun">.</span><span class="typ">RawTypedIdentifier</span>!("FiberId",ushort,65535,65535,mecca.log.FMT(""),false)</code></td><td>Returns the FiberId of the currently running fiber.
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">mecca<wbr/></span><span class="pun">.</span><span class="pln">lib<wbr/></span><span class="pun">.</span><span class="pln">typedid<wbr/></span><span class="pun">.</span><span class="typ">RawTypedIdentifier</span>!("FiberId",ushort,65535,65535,mecca.log.FMT("0x{_value!%04X}"),false)</code></td><td>Returns the FiberId of the currently running fiber.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.hangDetectorEnabled.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>hangDetectorEnabled</code></a><span class="tableEntryAnnotation">[get, set]</span>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Property for disabling/enabling the hang detector.
 </td>
 					</tr>
 					<tr>
@@ -410,6 +399,15 @@ $('#symbolSearchPane').show();</script>
 					</tr>
 					<tr>
 						<td>
+							<a href="../../mecca/reactor/Reactor.criticalSection.html" class="[&quot;public&quot;]">
+								<code>criticalSection</code>
+							</a>
+						</td>
+						<td>Return a RAII object handling a critical section
+</td>
+					</tr>
+					<tr>
+						<td>
 							<a href="../../mecca/reactor/Reactor.deferToThread.html" class="[&quot;public&quot;]">
 								<code>deferToThread</code>
 							</a>
@@ -424,6 +422,24 @@ $('#symbolSearchPane').show();</script>
 							</a>
 						</td>
 						<td>enter a no-fiber switch piece of code.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.getFiberName.html" class="[&quot;public&quot;]">
+								<code>getFiberName</code>
+							</a>
+						</td>
+						<td>Retrieve the fiber name set by <code class="lang-d"><a href="../../mecca/reactor/Reactor.setFiberName.html"><span class="pln"><a href="../../mecca/reactor/Reactor.setFiberName.html"><span class="pln">setFiberName</span></a></span></a></code>
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.getFiberPtr.html" class="[&quot;public&quot;]">
+								<code>getFiberPtr</code>
+							</a>
+						</td>
+						<td>Retrieve the fiber pointer set by <code class="lang-d"><a href="../../mecca/reactor/Reactor.setFiberName.html"><span class="pln"><a href="../../mecca/reactor/Reactor.setFiberName.html"><span class="pln">setFiberName</span></a></span></a></code>
 </td>
 					</tr>
 					<tr>
@@ -451,6 +467,24 @@ $('#symbolSearchPane').show();</script>
 							</a>
 						</td>
 						<td>leave the innermost critical section.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.LOG_TRACEBACK_AS.html" class="[&quot;public&quot;]">
+								<code>LOG_TRACEBACK_AS</code>
+							</a>
+						</td>
+						<td>Log the stack trace of a given fiber.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.pushFiberName.html" class="[&quot;public&quot;]">
+								<code>pushFiberName</code>
+							</a>
+						</td>
+						<td>Temporarily change the fiber's name
 </td>
 					</tr>
 					<tr>

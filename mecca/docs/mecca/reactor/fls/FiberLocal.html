@@ -170,17 +170,6 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 				</li>
 				<li class="tree-view collapsed">
-					<div class="package ">subsystems
-					</div>
-			<ul class="tree-view">
-				<li>
-					<div class="module ">
-						<a href="../../../mecca/reactor/subsystems/gc_tracker.html">gc_tracker</a>
-					</div>
-				</li>
-			</ul>
-				</li>
-				<li class="tree-view collapsed">
 					<div class="package ">sync
 					</div>
 			<ul class="tree-view">
@@ -284,7 +273,7 @@ $('#symbolSearchPane').show();</script>
 			<div class="prototype">
 				<code class="lang-d">
 					<div class="single-prototype">
-			<span class="kwd">ref </span><span class="pln">T</span> <span class="pln">FiberLocal(T, <span class="pln">T</span> initVal<span class="pln"> </span><span class="pun">= </span><span class="pln">T<wbr/></span><span class="pun">.</span><span class="pln">init</span>, <span class="typ">string</span> file<span class="pln"> </span><span class="pun">= </span><span class="kwd">__FILE__</span>, <span class="typ">string</span> mod<span class="pln"> </span><span class="pun">= </span><span class="kwd">__MODULE__</span>, <span class="typ">ulong</span> line<span class="pln"> </span><span class="pun">= </span><span class="kwd">__LINE__</span>)
+			<span class="kwd">ref </span><span class="pln">T</span> <span class="pln">FiberLocal(T, <span class="pln">T</span> initVal<span class="pln"> </span><span class="pun">= </span><span class="pln">T<wbr/></span><span class="pun">.</span><span class="pln">init</span>, <span class="typ">string</span> id<span class="pln"> </span><span class="pun">= </span><span class="kwd">null</span>, <span class="typ">string</span> file<span class="pln"> </span><span class="pun">= </span><span class="kwd">__FILE_FULL_PATH__</span>, <span class="typ">string</span> mod<span class="pln"> </span><span class="pun">= </span><span class="kwd">__MODULE__</span>, <span class="typ">ulong</span> line<span class="pln"> </span><span class="pun">= </span><span class="kwd">__LINE__</span>)
 			<span class="pun">()</span><span class="pln"> </span><span class="kwd">@property @trusted</span><span class="pun">;</span>
 					</div>
 				</code>
@@ -312,11 +301,33 @@ $('#symbolSearchPane').show();</script>
 </span><span class="kwd">pragma</span><span class="pun">(</span><span class="pln">msg</span><span class="pun">, </span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">ptr1</span><span class="pun">)); </span><span class="com">// ref uint function() nothrow @nogc @property @trusted
 </span><span class="kwd">auto </span><span class="pln">ptr2 </span><span class="pun">= &amp;</span><span class="pln">someName</span><span class="pun">();
 </span><span class="kwd">pragma</span><span class="pun">(</span><span class="pln">msg</span><span class="pun">, </span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">ptr2</span><span class="pun">)); </span><span class="com">// uint*</span></code></pre>
+
+<p> The different FLS variables are distinguished based on their template paramters. Usually this is not a problem, as the
+ source file and line number where the variable is defined is coded. Under some cases, however, this is not unique
+ enough.
+</p>
+
+<pre class="code"><code class="lang-d"><span class="kwd">static foreach</span><span class="pun">(</span><span class="pln">id</span><span class="pun">; [</span><span class="str">"fls1"</span><span class="pun">, </span><span class="str">"fls2"</span><span class="pun">, </span><span class="str">"someOtherFls"</span><span class="pun">] ) {
+    </span><span class="kwd">mixin</span><span class="pun">(</span><span class="str">q{alias %s = FiberLocal!int;}<wbr/></span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">id</span><span class="pun">));
+}</span></code></pre>
+
+<p> The above code creates three variables, called <code class="lang-d"><span class="pln">fls1</span></code>, <code class="lang-d"><span class="pln">fls2</span></code> and <code class="lang-d"><span class="pln">someOtherFls</span></code>, all aliased to the same actual value.
+ This is because all three are defined on the same source line.
+</p>
+
+<p> To solve this problem, use the <code class="lang-d"><span class="pln">id</span></code> template argument. It does not matter what it is, so long as it is unique. The
+ following code generates three variables, as before, but all three are unique:
+</p>
+
+<pre class="code"><code class="lang-d"><span class="kwd">static foreach</span><span class="pun">(</span><span class="pln">id</span><span class="pun">; [</span><span class="str">"fls1"</span><span class="pun">, </span><span class="str">"fls2"</span><span class="pun">, </span><span class="str">"someOtherFls"</span><span class="pun">] ) {
+    </span><span class="kwd">mixin</span><span class="pun">(</span><span class="str">q{alias %s = FiberLocal!(int, int.init, id);}<wbr/></span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">id</span><span class="pun">));
+}</span></code></pre>
 </section>
 <section><h2>Parameters</h2>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="T">T</td><td> The type of the FLS variable</td></tr>
 <tr><td id="initVal">initVal</td><td> The variable initial value</td></tr>
+<tr><td id="id">id</td><td> Optional identifier for defining multiple FLSes from the same line of code</td></tr>
 </table>
 </section>
 

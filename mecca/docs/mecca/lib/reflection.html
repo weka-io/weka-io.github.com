@@ -170,17 +170,6 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 				</li>
 				<li class="tree-view collapsed">
-					<div class="package ">subsystems
-					</div>
-			<ul class="tree-view">
-				<li>
-					<div class="module ">
-						<a href="../../mecca/reactor/subsystems/gc_tracker.html">gc_tracker</a>
-					</div>
-				</li>
-			</ul>
-				</li>
-				<li class="tree-view collapsed">
 					<div class="package ">sync
 					</div>
 			<ul class="tree-view">
@@ -355,35 +344,28 @@ $('#symbolSearchPane').show();</script>
 					<tr>
 						<td>
 							<code>
-								<a id="CapacityType" class="[&quot;public&quot;]" href="../../mecca/lib/reflection/CapacityType.html">CapacityType</a>
-							</code>
-						</td>
-						<td>Return the smallest type large enough to hold the numbers 0..n
-</td>
-					</tr>
-					<tr>
-						<td>
-							<code>
 								<a id="CopySignature" class="[&quot;public&quot;]" href="../../mecca/lib/reflection/CopySignature.html">CopySignature</a>
 							</code>
 						</td>
 						<td>CTFE template for genering a string for mixin copying a function's signature along with its default values
 </td>
 					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Manifest constants</h2>
+				<table>
+					<col class="caption"/>
 					<tr>
-						<td>
-							<code>
-								<a id="ForeachTypeof" class="[&quot;public&quot;]" href="../../mecca/lib/reflection/ForeachTypeof.html">ForeachTypeof</a>
-							</code>
-						</td>
-						<td>Replace std.traits.ForeachType with one that works when the item is copyable or not
-</td>
+						<th>Name</th><th>Type</th><th>Description</th>
 					</tr>
 					<tr>
 						<td>
-							<code>
-								<a id="isRefInputRange" class="[&quot;public&quot;]" href="../../mecca/lib/reflection/isRefInputRange.html">isRefInputRange</a>
-							</code>
+							<a id="isRefInputRange" class="[&quot;public&quot;]" href="../../mecca/lib/reflection/isRefInputRange.html">
+								<code>isRefInputRange</code>
+							</a>
+						</td>
+						<td>
 						</td>
 						<td>Returns <code class="lang-d"><span class="kwd">true</span></code> if <code class="lang-d"><span class="pln">R</span></code> is a pseudo input range with ref return.
 </td>
@@ -396,6 +378,30 @@ $('#symbolSearchPane').show();</script>
 					<col class="caption"/>
 					<tr>
 						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="CapacityType" class="[&quot;public&quot;]" href="../../mecca/lib/reflection/CapacityType.html">
+								<code>CapacityType</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="typ">ubyte</span></code>
+						</td>
+						<td>Return the smallest type large enough to hold the numbers 0..n
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="ForeachTypeof" class="[&quot;public&quot;]" href="../../mecca/lib/reflection/ForeachTypeof.html">
+								<code>ForeachTypeof</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="typ">ReturnType</span>!((){foreach(x;TU.init){returnx;}assert(0);})</code>
+						</td>
+						<td>Replace std.traits.ForeachType with one that works when the item is copyable or not
+</td>
 					</tr>
 					<tr>
 						<td>

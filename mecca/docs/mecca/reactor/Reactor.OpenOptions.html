@@ -170,17 +170,6 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 				</li>
 				<li class="tree-view collapsed">
-					<div class="package ">subsystems
-					</div>
-			<ul class="tree-view">
-				<li>
-					<div class="module ">
-						<a href="../../mecca/reactor/subsystems/gc_tracker.html">gc_tracker</a>
-					</div>
-				</li>
-			</ul>
-				</li>
-				<li class="tree-view collapsed">
 					<div class="package ">sync
 					</div>
 			<ul class="tree-view">
@@ -319,6 +308,13 @@ $('#symbolSearchPane').show();</script>
 					</tr>
 					<tr>
 						<td>
+							<a href="../../mecca/reactor/Reactor.OpenOptions.gcRunThreshold.html" class="[&quot;public&quot;]"><code>gcRunThreshold</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">ulong</span></code></td><td>Allocation threshold to trigger a GC run
+</td>
+					</tr>
+					<tr>
+						<td>
 							<a href="../../mecca/reactor/Reactor.OpenOptions.hangDetectorTimeout.html" class="[&quot;public&quot;]"><code>hangDetectorTimeout</code></a>
 						</td>
 						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">time<wbr/></span><span class="pun">.</span><span class="typ">Duration</span></code></td><td>Hard hang detection.
@@ -361,6 +357,13 @@ $('#symbolSearchPane').show();</script>
 					</tr>
 					<tr>
 						<td>
+							<a href="../../mecca/reactor/Reactor.OpenOptions.registerDefaultIdler.html" class="[&quot;public&quot;]"><code>registerDefaultIdler</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Whether the reactor should register the default (fd processing) idle handler
+</td>
+					</tr>
+					<tr>
+						<td>
 							<a href="../../mecca/reactor/Reactor.OpenOptions.threadDeferralEnabled.html" class="[&quot;public&quot;]"><code>threadDeferralEnabled</code></a>
 						</td>
 						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Whether we have enabled deferToThread
@@ -378,6 +381,13 @@ $('#symbolSearchPane').show();</script>
 							<a href="../../mecca/reactor/Reactor.OpenOptions.timerGranularity.html" class="[&quot;public&quot;]"><code>timerGranularity</code></a>
 						</td>
 						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">time<wbr/></span><span class="pun">.</span><span class="typ">Duration</span></code></td><td>Base granularity of the reactor's timer.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/Reactor.OpenOptions.utGcDisabled.html" class="[&quot;public&quot;]"><code>utGcDisabled</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td><td>Disable all GC collection during the reactor run time. Only available for UTs.
 </td>
 					</tr>
 				</table>

@@ -170,17 +170,6 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 				</li>
 				<li class="tree-view collapsed">
-					<div class="package ">subsystems
-					</div>
-			<ul class="tree-view">
-				<li>
-					<div class="module ">
-						<a href="../../mecca/reactor/subsystems/gc_tracker.html">gc_tracker</a>
-					</div>
-				</li>
-			</ul>
-				</li>
-				<li class="tree-view collapsed">
 					<div class="package ">sync
 					</div>
 			<ul class="tree-view">
@@ -302,7 +291,8 @@ $('#symbolSearchPane').show();</script>
 				</code>
 			</div>
 			<section><p>The reactor uses unconditional periodic collection, rather than lazy evaluation one employed by the default GC
-          settings. This setting sets how often the collection cycle should run.
+          settings. This setting sets how often the collection cycle should run. See <code class="lang-d"><a href="../../mecca/reactor/Reactor.OpenOptions.gcRunThreshold.html"><span class="pln">gcRunThreshold</span></a></code> for how to not
+          run the GC collection when not needed.
 </p>
 </section>
 

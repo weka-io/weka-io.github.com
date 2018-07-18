@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function Semaphore.setCapacity</title>
+		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">mecca
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">containers
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/containers/arrays.html">arrays</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/containers/otm_queue.html">otm_queue</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/containers/queue.html">queue</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">lib
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/concurrency.html">concurrency</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/console.html">console</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/consts.html">consts</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/division.html">division</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/io.html">io</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/iteration.html">iteration</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/net.html">net</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/reflection.html">reflection</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/string.html">string</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/lib/time.html">time</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">platform
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/platform/linux.html">linux</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/platform/x86.html">x86</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../../../mecca/reactor.html">reactor</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">io
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/io/fd.html">fd</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/io/fs_watcher.html">fs_watcher</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/io/inotify.html">inotify</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/io/signals.html">signals</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">lib
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/lib/ondemand_worker.html">ondemand_worker</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/lib/process.html">process</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">sync
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/barrier.html">barrier</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/event.html">event</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/fiber_queue.html">fiber_queue</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/future.html">future</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/lock.html">lock</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/queue.html">queue</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../../../mecca/reactor/sync/semaphore.html">semaphore</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/throttler.html">throttler</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/time_bomb.html">time_bomb</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/sync/verbose.html">verbose</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/fiber_group.html">fiber_group</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/fls.html">fls</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/types.html">types</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/reactor/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">runtime
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/runtime/main.html">main</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../../mecca/runtime/ut.html">ut</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+			</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Function Semaphore.setCapacity</h1><p>Change the capacity of the semaphore
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="typ">void</span> <span class="pln">setCapacity</span>
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">ulong</span> <span class="pln">newCapacity</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">bool</span> <span class="pln">immediate</span> <span class="pun">=</span> <span class="kwd">false</span>
+			<br/>
+			<span class="pun">)</span><span class="pln"> </span><span class="kwd">@nogc @safe</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			<section><p>If <code class="lang-d"><a href="../../../../mecca/reactor/sync/semaphore/Semaphore.setCapacity.html#immediate"><span class="pln">immediate</span></a></code> is set to <code class="lang-d"><span class="kwd">false</span></code> and the current <code class="lang-d"><a href="../../../../mecca/reactor/sync/semaphore/Semaphore.level.html"><span class="pln">level</span></a></code> is higher than the requested capacity, <code class="lang-d"><span class="pln">setCapacity</span></code>
+ will sleep until the capacity can be cleared.
+</p>
+
+<p> If <code class="lang-d"><a href="../../../../mecca/reactor/sync/semaphore/Semaphore.setCapacity.html#immediate"><span class="pln">immediate</span></a></code> is <code class="lang-d"><span class="kwd">false</span></code> then <code class="lang-d"><span class="pln">setCapacity</span></code> may return before the new capacity is actually set. This will
+ <i>only</i> happen if there is an older <code class="lang-d"><span class="pln">setCapacity</span></code> call that has not yet finished.
+</p>
+</section>
+
+			<section><h2>Parameters</h2>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="newCapacity">newCapacity</td><td> The new capacity</td></tr>
+<tr><td id="immediate">immediate</td><td> whether the new capacity takes effect immediately.</td></tr>
+</table>
+</section>
+<section><h2>Warnings</h2>
+<p>Setting the capacity to lower than the number of resources a waiting fiber is currently requesting is undefined.
+</p>
+
+<p> If <code class="lang-d"><a href="../../../../mecca/reactor/sync/semaphore/Semaphore.setCapacity.html#immediate"><span class="pln">immediate</span></a></code> is set to <code class="lang-d"><span class="kwd">true</span></code>, it is possible for <code class="lang-d"><a href="../../../../mecca/reactor/sync/semaphore/Semaphore.level.html"><span class="pln">level</span></a></code> to report a higher acquired count than <code class="lang-d"><a href="../../../../mecca/reactor/sync/semaphore/Semaphore.capacity.html"><span class="pln">capacity</span></a></code>.
+</p>
+
+<p> If there is a chance that multiple calls to <code class="lang-d"><span class="pln">setCapacity</span></code> are active at once, the <code class="lang-d"><span class="pln">immeditate</span></code> flag must be set
+ the same way on all of them. In other words, it is illegal to call <code class="lang-d"><span class="pln">setCapacity</span></code> with <code class="lang-d"><a href="../../../../mecca/reactor/sync/semaphore/Semaphore.setCapacity.html#immediate"><span class="pln">immediate</span></a></code> set to <code class="lang-d"><span class="kwd">false</span></code>,
+ and then call <code class="lang-d"><span class="pln">setCapacity</span></code> with <code class="lang-d"><a href="../../../../mecca/reactor/sync/semaphore/Semaphore.setCapacity.html#immediate"><span class="pln">immediate</span></a></code> set to true before the first call returns.
+</p>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

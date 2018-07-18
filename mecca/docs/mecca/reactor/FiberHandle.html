@@ -170,17 +170,6 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 				</li>
 				<li class="tree-view collapsed">
-					<div class="package ">subsystems
-					</div>
-			<ul class="tree-view">
-				<li>
-					<div class="module ">
-						<a href="../../mecca/reactor/subsystems/gc_tracker.html">gc_tracker</a>
-					</div>
-				</li>
-			</ul>
-				</li>
-				<li class="tree-view collapsed">
 					<div class="package ">sync
 					</div>
 			<ul class="tree-view">
@@ -307,7 +296,7 @@ $('#symbolSearchPane').show();</script>
 						<td>
 							<a href="../../mecca/reactor/FiberHandle.fiberId.html" class="[&quot;public&quot;, &quot;property&quot;]"><code>fiberId</code></a><span class="tableEntryAnnotation">[get]</span>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">mecca<wbr/></span><span class="pun">.</span><span class="pln">lib<wbr/></span><span class="pun">.</span><span class="pln">typedid<wbr/></span><span class="pun">.</span><span class="typ">RawTypedIdentifier</span>!("FiberId",ushort,65535,65535,mecca.log.FMT(""),false)</code></td><td>returns the FiberId described by the handle. If the handle is no longer valid, will return FiberId.invalid
+						<td class="typecol"><code class="prettyprint lang-d"><span class="pln">mecca<wbr/></span><span class="pun">.</span><span class="pln">lib<wbr/></span><span class="pun">.</span><span class="pln">typedid<wbr/></span><span class="pun">.</span><span class="typ">RawTypedIdentifier</span>!("FiberId",ushort,65535,65535,mecca.log.FMT("0x{_value!%04X}"),false)</code></td><td>the <code class="lang-d"><span class="typ">FiberId</span></code> described by the handle. If the handle is no longer valid, will return FiberId.invalid
 </td>
 					</tr>
 					<tr>
@@ -331,6 +320,15 @@ $('#symbolSearchPane').show();</script>
 					<col class="caption"/>
 					<tr>
 						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mecca/reactor/FiberHandle.getFiberId.html" class="[&quot;public&quot;]">
+								<code>getFiberId</code>
+							</a>
+						</td>
+						<td>returns the original <code class="lang-d"><span class="typ">FiberId</span></code> set for the handle, whether still valid or not
+</td>
 					</tr>
 					<tr>
 						<td>

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Template ForeachTypeof</title>
+		<title>Alias ForeachTypeof</title>
 		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
@@ -170,17 +170,6 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 				</li>
 				<li class="tree-view collapsed">
-					<div class="package ">subsystems
-					</div>
-			<ul class="tree-view">
-				<li>
-					<div class="module ">
-						<a href="../../../mecca/reactor/subsystems/gc_tracker.html">gc_tracker</a>
-					</div>
-				</li>
-			</ul>
-				</li>
-				<li class="tree-view collapsed">
 					<div class="package ">sync
 					</div>
 			<ul class="tree-view">
@@ -279,13 +268,13 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Template ForeachTypeof</h1><p>Replace std.traits.ForeachType with one that works when the item is copyable or not
+			<h1>Alias ForeachTypeof</h1><p>Replace std.traits.ForeachType with one that works when the item is copyable or not
 </p>
 			<div class="prototype">
 				<code class="lang-d">
 					<div class="single-prototype">
-			<span class="kwd">template</span> <span class="pln">ForeachTypeof</span>(T)
-			;
+			<span class="kwd">alias</span> <span class="pln">ForeachTypeof</span>(T)
+			 <span class="pun">=</span> <span class="typ">ReturnType</span>!((){foreach(x;TU.init){returnx;}assert(0);})<span class="pun">;</span>
 					</div>
 				</code>
 			</div>
