@@ -294,6 +294,11 @@ $('#symbolSearchPane').show();</script>
 <p> Proper invocation should use the following pattern:
 </p>
 <pre class="code"><code class="lang-d"><span class="kwd">while</span><span class="pun">( </span><span class="pln">isEventValid </span><span class="pun">&amp;&amp; !</span><span class="pln">event<wbr/></span><span class="pun">.</span><span class="pln">unreliableWait </span><span class="pun">) {}</span></code></pre>
+
+<p> It should be pointed out that spurious wakeups only happen when another fiber sets the event. This might still be
+ a spurious because another fiber might reset the event before the waiting fiber gets a chance to run. If this
+ is a desired behavior, you might wish to check whether <code class="lang-d"><a href="../../../../mecca/reactor/sync/event/Signal.html"><span class="typ">Signal</span></a></code> fits your needs better.
+</p>
 </section>
 
 			<section><h2>Parameters</h2>

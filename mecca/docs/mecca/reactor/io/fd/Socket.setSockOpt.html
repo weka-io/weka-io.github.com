@@ -280,7 +280,9 @@ $('#symbolSearchPane').show();</script>
 			<br/>
 			&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">optname</span><span class="pun">,</span>
 			<br/>
-			&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">void</span><span class="pun">)</span><span class="pun">[]</span> <span class="pln">optval</span>
+			&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">void</span><span class="pun">)</span><span class="pun">[]</span> <span class="pln">optval</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">msg</span> <span class="pun">=</span> <span class="str">"setsockopt failed"</span>
 			<br/>
 			<span class="pun">)</span><span class="pln"> </span><span class="kwd">@nogc</span><span class="pun">;</span>
 			<br/>
@@ -292,7 +294,9 @@ $('#symbolSearchPane').show();</script>
 			<br/>
 			&nbsp;&nbsp;<span class="typ">int</span> <span class="pln">optname</span><span class="pun">,</span>
 			<br/>
-			&nbsp;&nbsp;<span class="kwd">auto ref </span><span class="kwd">const</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span> <span class="pln">optval</span>
+			&nbsp;&nbsp;<span class="kwd">auto ref </span><span class="kwd">const</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span> <span class="pln">optval</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">msg</span> <span class="pun">=</span> <span class="str">"setsockopt failed"</span>
 			<br/>
 			<span class="pun">)</span><span class="pln"> </span><span class="kwd">@nogc</span><span class="pun">;</span>
 					</div>

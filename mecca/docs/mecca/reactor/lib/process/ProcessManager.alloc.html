@@ -280,13 +280,14 @@ $('#symbolSearchPane').show();</script>
 			</div>
 			<section><p>This is the way to allocate a new child process handler.
 </p>
-</section>
 
-			<section><h2>Returns</h2>
-<p>Returns a smart object referencing the Process struct. Struct is destructed when the referenece is destructed.
+<p> Returns a smart object referencing the Process struct. Struct is destructed when the referenece is destructed.
+ If the reference is destructed, this is effectively the same as detaching from the running process. The process
+ remains running, but we will no longer be notified when it exits.
 </p>
 </section>
 
+			
 			<footer>
 				<table class="license-info">
 					<tr>

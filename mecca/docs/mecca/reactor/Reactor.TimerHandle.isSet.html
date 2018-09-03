@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Variable Reactor.OpenOptions.numFibers</title>
+		<title>Function Reactor.TimerHandle.isSet</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
@@ -268,30 +268,23 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Variable Reactor.OpenOptions.numFibers</h1><p>Maximum number of fibers.
+			<h1>Function Reactor.TimerHandle.isSet</h1><p>Returns whether the handle was used
 </p>
 			<div class="prototype">
 				<code class="lang-d">
 					<div class="single-prototype">
-			<span class="kwd">struct</span> <a href="../../mecca/reactor/Reactor.OpenOptions.html"><span class="typ">Reactor.OpenOptions</span></a>
-			<br/>
-			<span class="pun">
-				{
-				<br/>
-			</span>
-			&nbsp;&nbsp;<span class="com">// ...</span>
-			<br/>
-			&nbsp;&nbsp;<span class="typ">ushort</span> <span class="pln">numFibers</span>
-			 <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">ushort</span><span class="pun">)</span><span class="lit">256u</span><span class="pun">;</span>
-			<br/>
-			&nbsp;&nbsp;<span class="com">// ...</span>
-			<br/>
-			<span class="pun">}</span>
+			<span class="typ">bool</span> <span class="pln">isSet
+			<span class="pun">()</span><span class="pln"> </span><span class="kwd">pure nothrow @property @nogc @safe const</span><span class="pun">;</span>
 					</div>
 				</code>
 			</div>
-			
-			
+			<section></section>
+
+			<section><h2>returns</h2>
+<p><code class="lang-d"><span class="kwd">true</span></code> if the handle was set. <code class="lang-d"><span class="kwd">false</span></code> if it is still in its init value.
+</p>
+</section>
+
 			<footer>
 				<table class="license-info">
 					<tr>

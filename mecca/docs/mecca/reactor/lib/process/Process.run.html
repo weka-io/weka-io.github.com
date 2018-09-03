@@ -286,7 +286,13 @@ $('#symbolSearchPane').show();</script>
 </p>
 </section>
 
-			
+			<section><h2>Errors</h2>
+<p>On failure to create a child process, this function will throw an <code class="lang-d"><span class="typ">ErrnoException</span></code>.
+ If the exec itself fails (e.g.: trying to run a command that doesn't exist), this function will report success,
+ but calling <code class="lang-d"><a href="../../../../mecca/reactor/lib/process/Process.wait.html"><span class="pln">wait</span></a></code> will return a child exit status of 255.
+</p>
+</section>
+
 			<footer>
 				<table class="license-info">
 					<tr>

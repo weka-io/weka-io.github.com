@@ -276,6 +276,8 @@ $('#symbolSearchPane').show();</script>
 			<span class="typ">void</span> <span class="pln">registerCallback</span>
 			<span class="pun">(</span>
 			<br/>
+			&nbsp;&nbsp;<span class="pln">mecca<wbr/></span><span class="pun">.</span><span class="pln">reactor<wbr/></span><span class="pun">.</span><span class="pln">subsystems<wbr/></span><span class="pun">.</span><span class="pln">poller<wbr/></span><span class="pun">.</span><span class="typ">Direction</span> <span class="pln">dir</span><span class="pun">,</span>
+			<br/>
 			&nbsp;&nbsp;<span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span> <span class="pln">dlg</span><span class="pun">,</span>
 			<br/>
 			&nbsp;&nbsp;<span class="typ">void</span><span class="pun">*</span> <span class="pln">opaq</span><span class="pun">,</span>
@@ -304,6 +306,7 @@ $('#symbolSearchPane').show();</script>
 
 			<section><h2>Parameters</h2>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="dir">dir</td><td> direction (<code class="lang-d"><span class="typ">Read</span></code>/<code class="lang-d"><span class="typ">Write</span></code>) to register. The <code class="lang-d"><span class="typ">Direction<wbr/></span><span class="pun">.</span><span class="typ">Both</span></code> is illegal here.</td></tr>
 <tr><td id="dlg">dlg</td><td> the delegate to be called</td></tr>
 <tr><td id="opaq">opaq</td><td> a value that will be passed, as is, to the delegate.</td></tr>
 <tr><td id="oneShot">oneShot</td><td> if set to <code class="lang-d"><span class="kwd">true</span></code>, the callback will automatically be deregistered after being called once.</td></tr>

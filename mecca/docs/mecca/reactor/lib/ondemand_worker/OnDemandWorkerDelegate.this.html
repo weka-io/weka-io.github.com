@@ -273,14 +273,14 @@ $('#symbolSearchPane').show();</script>
 			<div class="prototype">
 				<code class="lang-d">
 					<div class="single-prototype">
-			<span class="pln">this</span>
+			<span class="kwd">ref </span><span class="pln">this</span>
 			<span class="pun">(</span>
 			<br/>
 			&nbsp;&nbsp;<span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="pun">)</span> <span class="pln">dg</span><span class="pun">,</span>
 			<br/>
 			&nbsp;&nbsp;<span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">@safe</span> <a href="../../../../mecca/reactor/FiberHandle.html"><span class="typ">FiberHandle</span></a> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="pun">)</span><span class="pun">)</span> <span class="pln">spawnFiberDlg</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">FiberHandle </span><span class="kwd">delegate</span><span class="pun">(</span><span class="typ">void </span><span class="kwd">delegate</span><span class="pun">() </span><span class="pln">dlg</span><span class="pun">) </span><span class="kwd">nothrow @nogc @safe</span><span class="pun">)</span><span class="kwd">null</span>
 			<br/>
-			<span class="pun">)</span><span class="pun">;</span>
+			<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @nogc @safe</span><span class="pun">;</span>
 					</div>
 				</code>
 			</div>

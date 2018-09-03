@@ -103,6 +103,14 @@
 <url><loc>http://127.0.0.1/mecca/lib/division/U32Divisor.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/lib/division/U64Divisor.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/lib/exception.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/lib/exception/assertEQ.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/lib/exception/assertGE.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/lib/exception/assertGT.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/lib/exception/assertLE.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/lib/exception/assertLT.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/lib/exception/assertNE.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/lib/exception/assertOp.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/lib/exception/assertRaised.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/lib/exception/ExcBuf.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/lib/exception/ExcBuf.construct.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/lib/exception/ExcBuf.constructFmt.html</loc></url>
@@ -405,6 +413,7 @@
 <url><loc>http://127.0.0.1/mecca/reactor/lib/ondemand_worker/OnDemandWorkerFunc.waitComplete.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/lib/ondemand_worker/OnDemandWorkerFunc.waitIdle.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/lib/ondemand_worker/SpawnFiberDlg.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/reactor/lib/ondemand_worker/WorkerCancelled.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/lib/process.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/lib/process/Process.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/lib/process/Process.isRunning.html</loc></url>
@@ -507,6 +516,7 @@
 <url><loc>http://127.0.0.1/mecca/reactor/sync/semaphore/Semaphore.release.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/sync/semaphore/Semaphore.setCapacity.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/sync/semaphore/Semaphore.this.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/reactor/sync/semaphore/Semaphore.tryAcquire.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/sync/throttler.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/sync/throttler/Throttler.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/sync/throttler/ThrottlerImpl.html</loc></url>
@@ -592,6 +602,7 @@
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.isOpen.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.isRunning.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.isSpecialFiber.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/reactor/Reactor.iterateFibers.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.joinFiber.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.leaveCriticalSection.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.LOG_TRACEBACK_AS.html</loc></url>
@@ -646,6 +657,7 @@
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.throwInFiber.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.TimerHandle.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.TimerHandle.cancelTimer.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/reactor/Reactor.TimerHandle.isSet.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.TimerHandle.isValid.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.TimerHandle.reset.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.yield.html</loc></url>

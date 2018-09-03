@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Function Semaphore.acquire</title>
+		<title>Function Semaphore.tryAcquire</title>
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
@@ -268,38 +268,27 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Function Semaphore.acquire</h1><p>acquire resources from the semaphore.
+			<h1>Function Semaphore.tryAcquire</h1><p>Try to acquire resources from the semaphore.
 </p>
 			<div class="prototype">
 				<code class="lang-d">
 					<div class="single-prototype">
-			<span class="typ">void</span> <span class="pln">acquire</span>
+			<span class="typ">bool</span> <span class="pln">tryAcquire</span>
 			<span class="pun">(</span>
 			<br/>
-			&nbsp;&nbsp;<span class="typ">ulong</span> <span class="pln">amount</span> <span class="pun">=</span> <span class="lit">1LU</span><span class="pun">,</span>
+			&nbsp;&nbsp;<span class="typ">ulong</span> <span class="pln">amount</span> <span class="pun">=</span> <span class="lit">1LU</span>
 			<br/>
-			&nbsp;&nbsp;<a href="../../../../mecca/lib/time/Timeout.html"><span class="typ">Timeout</span></a> <span class="pln">timeout</span> <span class="pun">=</span> <span class="typ">Timeout</span><span class="pun">(</span><span class="typ">TscTimePoint</span><span class="pun">(</span><span class="lit">9223372036854775807L</span><span class="pun">))</span>
-			<br/>
-			<span class="pun">)</span><span class="pln"> </span><span class="kwd">@nogc @safe</span><span class="pun">;</span>
+			<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @nogc @safe</span><span class="pun">;</span>
 					</div>
 				</code>
 			</div>
-			<section><p>Acquire one or more "resources" from the semaphore. Sleep if not enough are available. The semaphore guarantees a
- strict FIFO. A new request, even if satifiable, will not be granted until all older requests are granted.
+			<section><p>Try to acquire one or more "resources" from the semaphore. To maintain strict FIFO, the acquire will fail if
+ another request is currently pending, even if there are enough resources to satisfy both requests.
 </p>
 </section>
 
-			<section><h2>Parameters</h2>
-<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="amount">amount</td><td> the amount of resources to request.</td></tr>
-<tr><td id="timeout">timeout</td><td> how long to wait for resources to become available.</td></tr>
-</table>
-</section>
-<section><h2>Throws</h2>
-<p>TimeoutExpired if timeout has elapsed without satisfying the request.
-</p>
-
-<p>  Also, any other exception may be thrown if injected using theReactor.throwInFiber.
+			<section><h2>returns</h2>
+<p>Returns <code class="lang-d"><span class="kwd">true</span></code> if the request was granted.
 </p>
 </section>
 

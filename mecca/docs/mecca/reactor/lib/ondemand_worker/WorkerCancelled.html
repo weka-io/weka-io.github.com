@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Function Semaphore.acquire</title>
+		<title>Class WorkerCancelled</title>
 		<link rel="stylesheet" type="text/css" href="../../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../../scripts/ddox.js">/**/</script>
@@ -153,12 +153,12 @@ $('#symbolSearchPane').show();</script>
 				</li>
 			</ul>
 				</li>
-				<li class="tree-view collapsed">
+				<li class="tree-view ">
 					<div class="package ">lib
 					</div>
 			<ul class="tree-view">
 				<li>
-					<div class="module ">
+					<div class="module selected">
 						<a href="../../../../mecca/reactor/lib/ondemand_worker.html">ondemand_worker</a>
 					</div>
 				</li>
@@ -169,7 +169,7 @@ $('#symbolSearchPane').show();</script>
 				</li>
 			</ul>
 				</li>
-				<li class="tree-view ">
+				<li class="tree-view collapsed">
 					<div class="package ">sync
 					</div>
 			<ul class="tree-view">
@@ -204,7 +204,7 @@ $('#symbolSearchPane').show();</script>
 					</div>
 				</li>
 				<li>
-					<div class="module selected">
+					<div class="module ">
 						<a href="../../../../mecca/reactor/sync/semaphore.html">semaphore</a>
 					</div>
 				</li>
@@ -268,41 +268,19 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Function Semaphore.acquire</h1><p>acquire resources from the semaphore.
+			<h1>Class WorkerCancelled</h1><p>Exception thrown to abort a cancelled worker
 </p>
 			<div class="prototype">
 				<code class="lang-d">
 					<div class="single-prototype">
-			<span class="typ">void</span> <span class="pln">acquire</span>
-			<span class="pun">(</span>
-			<br/>
-			&nbsp;&nbsp;<span class="typ">ulong</span> <span class="pln">amount</span> <span class="pun">=</span> <span class="lit">1LU</span><span class="pun">,</span>
-			<br/>
-			&nbsp;&nbsp;<a href="../../../../mecca/lib/time/Timeout.html"><span class="typ">Timeout</span></a> <span class="pln">timeout</span> <span class="pun">=</span> <span class="typ">Timeout</span><span class="pun">(</span><span class="typ">TscTimePoint</span><span class="pun">(</span><span class="lit">9223372036854775807L</span><span class="pun">))</span>
-			<br/>
-			<span class="pun">)</span><span class="pln"> </span><span class="kwd">@nogc @safe</span><span class="pun">;</span>
+			<span class="kwd">class</span> <span class="typ">WorkerCancelled</span>
+			<br>&nbsp;&nbsp;: <a href="../../../../mecca/reactor/types/FiberInterrupt.html"><span class="typ">FiberInterrupt</span></a>
+			<span class="pun">;</span>
 					</div>
 				</code>
 			</div>
-			<section><p>Acquire one or more "resources" from the semaphore. Sleep if not enough are available. The semaphore guarantees a
- strict FIFO. A new request, even if satifiable, will not be granted until all older requests are granted.
-</p>
-</section>
-
-			<section><h2>Parameters</h2>
-<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="amount">amount</td><td> the amount of resources to request.</td></tr>
-<tr><td id="timeout">timeout</td><td> how long to wait for resources to become available.</td></tr>
-</table>
-</section>
-<section><h2>Throws</h2>
-<p>TimeoutExpired if timeout has elapsed without satisfying the request.
-</p>
-
-<p>  Also, any other exception may be thrown if injected using theReactor.throwInFiber.
-</p>
-</section>
-
+			
+			
 			<footer>
 				<table class="license-info">
 					<tr>

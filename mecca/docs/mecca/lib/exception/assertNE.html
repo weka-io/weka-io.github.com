@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Module mecca.reactor.lib.ondemand_worker</title>
+		<title>Function assertNE</title>
 		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
@@ -45,7 +45,7 @@ $('#symbolSearchPane').show();</script>
 				</li>
 			</ul>
 				</li>
-				<li class="tree-view collapsed">
+				<li class="tree-view ">
 					<div class="package ">lib
 					</div>
 			<ul class="tree-view">
@@ -70,7 +70,7 @@ $('#symbolSearchPane').show();</script>
 					</div>
 				</li>
 				<li>
-					<div class="module ">
+					<div class="module selected">
 						<a href="../../../mecca/lib/exception.html">exception</a>
 					</div>
 				</li>
@@ -122,7 +122,7 @@ $('#symbolSearchPane').show();</script>
 				</li>
 			</ul>
 				</li>
-				<li class="tree-view ">
+				<li class="tree-view collapsed">
 					<div class="package ">
 						<a href="../../../mecca/reactor.html">reactor</a>
 					</div>
@@ -153,12 +153,12 @@ $('#symbolSearchPane').show();</script>
 				</li>
 			</ul>
 				</li>
-				<li class="tree-view ">
+				<li class="tree-view collapsed">
 					<div class="package ">lib
 					</div>
 			<ul class="tree-view">
 				<li>
-					<div class="module selected">
+					<div class="module ">
 						<a href="../../../mecca/reactor/lib/ondemand_worker.html">ondemand_worker</a>
 					</div>
 				</li>
@@ -268,75 +268,26 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Module mecca.reactor.lib.ondemand_worker</h1><p>Run a job in a fiber, but never two simultaneously
+			<h1>Function assertNE</h1><p>Assert that two values are not equal.
 </p>
-			<section></section>
-			<section>
-				<h2>Classes</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th><th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<code>
-								<a id="WorkerCancelled" class="[&quot;public&quot;]" href="../../../mecca/reactor/lib/ondemand_worker/WorkerCancelled.html">WorkerCancelled</a>
-							</code>
-						</td>
-						<td>Exception thrown to abort a cancelled worker
-</td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Structs</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th><th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<code>
-								<a id="OnDemandWorkerDelegate" class="[&quot;public&quot;]" href="../../../mecca/reactor/lib/ondemand_worker/OnDemandWorkerDelegate.html">OnDemandWorkerDelegate</a>
-							</code>
-						</td>
-						<td>Same as <code class="lang-d"><a href="../../../mecca/reactor/lib/ondemand_worker/OnDemandWorkerFunc.html"><span class="typ">OnDemandWorkerFunc</span></a></code>, except with a delegate.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<code>
-								<a id="OnDemandWorkerFunc" class="[&quot;public&quot;]" href="../../../mecca/reactor/lib/ondemand_worker/OnDemandWorkerFunc.html">OnDemandWorkerFunc</a>
-							</code>
-						</td>
-						<td>Run a job in a fiber, making sure never to run two simultaneously.
-</td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Aliases</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th><th>Type</th><th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="SpawnFiberDlg" class="[&quot;public&quot;]" href="../../../mecca/reactor/lib/ondemand_worker/SpawnFiberDlg.html">
-								<code>SpawnFiberDlg</code>
-							</a>
-						</td>
-						<td>
-							<code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">@safe</span> <a href="../../../mecca/reactor/FiberHandle.html"><span class="typ">FiberHandle</span></a> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="pun">)</span><span class="pun">)</span></code>
-						</td>
-						<td>A fiber spawning delegate must be of this type
-</td>
-					</tr>
-				</table>
-			</section>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="typ">void</span> <span class="pln">assertNE</span>(L, R, <span class="typ">string</span> file<span class="pln"> </span><span class="pun">= </span><span class="kwd">__FILE_FULL_PATH__</span>, <span class="typ">string</span> mod<span class="pln"> </span><span class="pun">= </span><span class="kwd">__MODULE__</span>, <span class="typ">ulong</span> line<span class="pln"> </span><span class="pun">= </span><span class="kwd">__LINE__</span>)
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">L</span> <span class="pln">lhs</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="pln">R</span> <span class="pln">rhs</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="kwd">scope lazy </span><span class="typ">string</span> <span class="pln">msg</span> <span class="pun">=</span> <span class="str">""</span>
+			<br/>
+			<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @trusted</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			
 			<footer>
 				<table class="license-info">
 					<tr>
