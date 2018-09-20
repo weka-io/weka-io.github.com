@@ -127,6 +127,7 @@
 <url><loc>http://127.0.0.1/mecca/lib/io/BufferedIO.open.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/lib/io/BufferedIO.open.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/lib/io/BufferedIO.read.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/lib/io/BufferedIO.reset.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/lib/io/BufferedIO.this.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/lib/io/BufferedIO.write.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/lib/io/createPipe.html</loc></url>
@@ -545,6 +546,7 @@
 <url><loc>http://127.0.0.1/mecca/reactor/fiber_group/FiberGroup.spawnFiber.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/fiber_group/FiberGroup.spawnFiber.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/fiber_group/FiberGroup.spawnFiberIfOpen.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/reactor/fiber_group/FiberGroup.waitEmpty.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/fls.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/fls/FiberLocal.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/fls/setFiberFls.html</loc></url>
@@ -576,6 +578,7 @@
 <url><loc>http://127.0.0.1/mecca/reactor/FiberState.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/isReactorThread.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/reactor/Reactor.assertMayContextSwitch.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.boostFiberPriority.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.boostFiberPriority.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.call.html</loc></url>
@@ -586,6 +589,7 @@
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.currentFiberId.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.deferToThread.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.deferToThread.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/reactor/Reactor.dontYield.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.enterCriticalSection.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.getFiberName.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.getFiberName.html</loc></url>
@@ -626,6 +630,8 @@
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.pushFiberName.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.reactorStats.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.registerIdleCallback.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/reactor/Reactor.registerRecurringTimer.html</loc></url>
+<url><loc>http://127.0.0.1/mecca/reactor/Reactor.registerRecurringTimer.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.registerRecurringTimer.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.registerRecurringTimer.html</loc></url>
 <url><loc>http://127.0.0.1/mecca/reactor/Reactor.registerTimer.html</loc></url>

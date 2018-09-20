@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Struct BufferedIO</title>
+		<title>Function BufferedIO.reset</title>
 		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
@@ -268,105 +268,20 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Struct BufferedIO</h1><p>A wrapper to perform buffered IO over another IO type
+			<h1>Function BufferedIO.reset</h1><p>Forget all pending writes
 </p>
 			<div class="prototype">
 				<code class="lang-d">
 					<div class="single-prototype">
-			<span class="kwd">struct</span> <span class="typ">BufferedIO</span>(T)
-			<span class="pun">;</span>
+			<span class="typ">void</span> <span class="pln">reset
+			<span class="pun">()</span><span class="pln"> </span><span class="kwd">pure nothrow @nogc @safe</span><span class="pun">;</span>
 					</div>
 				</code>
 			</div>
-			
-			<section><h2>Constructors</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th><th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.this.html" class="[&quot;public&quot;]">
-								<code>this</code>
-							</a>
-						</td>
-						<td>Construct an initialized buffered IO object
-</td>
-					</tr>
-				</table>
-			</section>
-			<section><h2>Methods</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th><th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.close.html" class="[&quot;public&quot;]">
-								<code>close</code>
-							</a>
-						</td>
-						<td>Close the buffered IO
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.flush.html" class="[&quot;public&quot;]">
-								<code>flush</code>
-							</a>
-						</td>
-						<td>Flush the write buffers
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.opAssign.html" class="[&quot;public&quot;]">
-								<code>opAssign</code>
-							</a>
-						</td>
-						<td>Attach an underlying FD to the buffered IO instance
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.open.html" class="[&quot;public&quot;]">
-								<code>open</code>
-							</a>
-						</td>
-						<td>Prepare the buffers.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.read.html" class="[&quot;public&quot;]">
-								<code>read</code>
-							</a>
-						</td>
-						<td>Perform @safe buffered read
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.reset.html" class="[&quot;public&quot;]">
-								<code>reset</code>
-							</a>
-						</td>
-						<td>Forget all pending writes
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.write.html" class="[&quot;public&quot;]">
-								<code>write</code>
-							</a>
-						</td>
-						<td>Perform @safe buffered write
-</td>
-					</tr>
-				</table>
-			</section>
+			<section><p>This causes the <code class="lang-d"><a href="../../../mecca/lib/io/BufferedIO.html"><span class="typ">BufferedIO</span></a></code> to discard all unflushed write data. Cached read data is unaffected.
+</p>
+</section>
+
 			
 			<footer>
 				<table class="license-info">

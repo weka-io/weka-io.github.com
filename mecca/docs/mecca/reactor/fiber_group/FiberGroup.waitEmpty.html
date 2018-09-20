@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Struct BufferedIO</title>
+		<title>Function FiberGroup.waitEmpty</title>
 		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
@@ -45,7 +45,7 @@ $('#symbolSearchPane').show();</script>
 				</li>
 			</ul>
 				</li>
-				<li class="tree-view ">
+				<li class="tree-view collapsed">
 					<div class="package ">lib
 					</div>
 			<ul class="tree-view">
@@ -75,7 +75,7 @@ $('#symbolSearchPane').show();</script>
 					</div>
 				</li>
 				<li>
-					<div class="module selected">
+					<div class="module ">
 						<a href="../../../mecca/lib/io.html">io</a>
 					</div>
 				</li>
@@ -122,7 +122,7 @@ $('#symbolSearchPane').show();</script>
 				</li>
 			</ul>
 				</li>
-				<li class="tree-view collapsed">
+				<li class="tree-view ">
 					<div class="package ">
 						<a href="../../../mecca/reactor.html">reactor</a>
 					</div>
@@ -226,7 +226,7 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 				</li>
 				<li>
-					<div class="module ">
+					<div class="module selected">
 						<a href="../../../mecca/reactor/fiber_group.html">fiber_group</a>
 					</div>
 				</li>
@@ -268,105 +268,24 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Struct BufferedIO</h1><p>A wrapper to perform buffered IO over another IO type
+			<h1>Function FiberGroup.waitEmpty</h1><p>Wait for all fibers in a group to exit.
 </p>
 			<div class="prototype">
 				<code class="lang-d">
 					<div class="single-prototype">
-			<span class="kwd">struct</span> <span class="typ">BufferedIO</span>(T)
-			<span class="pun">;</span>
+			<span class="typ">void</span> <span class="pln">waitEmpty</span>
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<a href="../../../mecca/lib/time/Timeout.html"><span class="typ">Timeout</span></a> <span class="pln">timeout</span> <span class="pun">=</span> <span class="typ">Timeout</span><span class="pun">(</span><span class="typ">TscTimePoint</span><span class="pun">(</span><span class="lit">9223372036854775807L</span><span class="pun">))</span>
+			<br/>
+			<span class="pun">)</span><span class="pln"> </span><span class="kwd">@nogc @safe</span><span class="pun">;</span>
 					</div>
 				</code>
 			</div>
-			
-			<section><h2>Constructors</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th><th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.this.html" class="[&quot;public&quot;]">
-								<code>this</code>
-							</a>
-						</td>
-						<td>Construct an initialized buffered IO object
-</td>
-					</tr>
-				</table>
-			</section>
-			<section><h2>Methods</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th><th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.close.html" class="[&quot;public&quot;]">
-								<code>close</code>
-							</a>
-						</td>
-						<td>Close the buffered IO
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.flush.html" class="[&quot;public&quot;]">
-								<code>flush</code>
-							</a>
-						</td>
-						<td>Flush the write buffers
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.opAssign.html" class="[&quot;public&quot;]">
-								<code>opAssign</code>
-							</a>
-						</td>
-						<td>Attach an underlying FD to the buffered IO instance
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.open.html" class="[&quot;public&quot;]">
-								<code>open</code>
-							</a>
-						</td>
-						<td>Prepare the buffers.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.read.html" class="[&quot;public&quot;]">
-								<code>read</code>
-							</a>
-						</td>
-						<td>Perform @safe buffered read
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.reset.html" class="[&quot;public&quot;]">
-								<code>reset</code>
-							</a>
-						</td>
-						<td>Forget all pending writes
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../../mecca/lib/io/BufferedIO.write.html" class="[&quot;public&quot;]">
-								<code>write</code>
-							</a>
-						</td>
-						<td>Perform @safe buffered write
-</td>
-					</tr>
-				</table>
-			</section>
+			<section><p>This function does not initiate termination. Use <code class="lang-d"><a href="../../../mecca/reactor/fiber_group/FiberGroup.close.html"><span class="pln">close</span></a></code> to actually terminate the fibers.
+</p>
+</section>
+
 			
 			<footer>
 				<table class="license-info">

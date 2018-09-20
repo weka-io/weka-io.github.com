@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Function Reactor.registerRecurringTimer</title>
+		<title>Function Reactor.dontYield</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
@@ -268,77 +268,31 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Function Reactor.registerRecurringTimer</h1><p>registers a timer that will repeatedly trigger at set intervals.
+			<h1>Function Reactor.dontYield</h1><p>Don't yield
 </p>
 			<div class="prototype">
 				<code class="lang-d">
 					<div class="single-prototype">
-			<a href="../../mecca/reactor/Reactor.TimerHandle.html"><span class="typ">Reactor<wbr/></span><span class="pun">.<wbr/></span><span class="typ">TimerHandle</span></a> <span class="pln">registerRecurringTimer</span>
-			<span class="pun">(</span>
-			<br/>
-			&nbsp;&nbsp;<span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">time<wbr/></span><span class="pun">.</span><span class="typ">Duration</span> <span class="pln">interval</span><span class="pun">,</span>
-			<br/>
-			&nbsp;&nbsp;<span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="pun">)</span> <span class="pln">dg</span>
-			<br/>
-			<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @nogc @safe</span><span class="pun">;</span>
-			<br/>
-			<br/>
-			<a href="../../mecca/reactor/Reactor.TimerHandle.html"><span class="typ">Reactor<wbr/></span><span class="pun">.<wbr/></span><span class="typ">TimerHandle</span></a> <span class="pln">registerRecurringTimer</span>(alias F)
-			<span class="pun">(</span>
-			<br/>
-			&nbsp;&nbsp;<span class="typ">Duration</span> <span class="pln">interval</span><span class="pun">,</span>
-			<br/>
-			&nbsp;&nbsp;<span class="typ">Parameters</span>!F <span class="pln">params</span>
-			<br/>
-			<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @nogc @safe</span><span class="pun">;</span>
-			<br/>
-			<br/>
-			<a href="../../mecca/reactor/Reactor.TimerHandle.html"><span class="typ">Reactor<wbr/></span><span class="pun">.<wbr/></span><span class="typ">TimerHandle</span></a> <span class="pln">registerRecurringTimer</span>
-			<span class="pun">(</span>
-			<br/>
-			&nbsp;&nbsp;<span class="pln">core<wbr/></span><span class="pun">.</span><span class="pln">time<wbr/></span><span class="pun">.</span><span class="typ">Duration</span> <span class="pln">interval</span><span class="pun">,</span>
-			<br/>
-			&nbsp;&nbsp;<span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="pun">)</span> <span class="pln">dg</span><span class="pun">,</span>
-			<br/>
-			&nbsp;&nbsp;<a href="../../mecca/lib/time/Timeout.html"><span class="typ">Timeout</span></a> <span class="pln">firstRun</span>
-			<br/>
-			<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @nogc @safe</span><span class="pun">;</span>
-			<br/>
-			<br/>
-			<a href="../../mecca/reactor/Reactor.TimerHandle.html"><span class="typ">Reactor<wbr/></span><span class="pun">.<wbr/></span><span class="typ">TimerHandle</span></a> <span class="pln">registerRecurringTimer</span>(alias F)
-			<span class="pun">(</span>
-			<br/>
-			&nbsp;&nbsp;<span class="typ">Duration</span> <span class="pln">interval</span><span class="pun">,</span>
-			<br/>
-			&nbsp;&nbsp;<span class="typ">Parameters</span>!F <span class="pln">params</span><span class="pun">,</span>
-			<br/>
-			&nbsp;&nbsp;<a href="../../mecca/lib/time/Timeout.html"><span class="typ">Timeout</span></a> <span class="pln">firstRun</span>
-			<br/>
-			<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @nogc @safe</span><span class="pun">;</span>
+			<span class="typ">void</span> <span class="pln">dontYield
+			<span class="pun">()</span><span class="pln"> </span><span class="kwd">nothrow @nogc @safe</span><span class="pun">;</span>
 					</div>
 				</code>
 			</div>
-			<section><p>You do not control precisely when the callback is invoked, only how often. The invocations are going to be evenly
- spaced out (best effort), but the first invocation might be almost immediately after the call or a whole
- <code class="lang-d"><a href="../../mecca/reactor/Reactor.registerRecurringTimer.html#interval"><span class="pln">interval</span></a></code> after.
+			<section><p>This function should called by functions that might yield but, in this case, don't. For example, <code class="lang-d"><span class="typ">Lock<wbr/></span><span class="pun">.</span><span class="pln">acquire</span></code>
+ calls this function if the lock is available and no sleep is necessary.
 </p>
 
-<p> You can use the <code class="lang-d"><a href="../../mecca/reactor/Reactor.registerRecurringTimer.html#firstRun"><span class="pln">firstRun</span></a></code> argument to control when the first invocation is going to be (but the same rule will
- still apply to the second one).
+<p> This function checks certain condition that have to happen in case a yield happens (such as that we're not inside
+ a critical section). Under the "fail early" doctrine, we want those asserts to fail despite the fact we do not,
+ actually, yield in this case.
+</p>
+
+<p> This function also resets certain flags that are meant to take effect only until the next context switch, such
+ as calls to <code class="lang-d"><a href="../../mecca/reactor/Reactor.boostFiberPriority.html"><span class="pln">boostFiberPriority</span></a></code>.
 </p>
 </section>
 
-			<section><h2>Parameters</h2>
-<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="interval">interval</td><td> the frequency with which the callback will be called.</td></tr>
-<tr><td id="dg">dg</td><td> the callback to invoke</td></tr>
-<tr><td id="F">F</td><td> an alias to the function to be called</td></tr>
-<tr><td id="params">params</td><td> the arguments to pass to F on each invocation</td></tr>
-<tr><td id="firstRun">firstRun</td><td> if supplied, directly sets when is the first time the timer shall run. The value does not have any
-      special constraints.</td></tr>
-</table>
-</section>
-
+			
 			<footer>
 				<table class="license-info">
 					<tr>
